@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "author": "Antigravity",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 100, "left": 150, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic", "top": -80, "left": 160, "attrs": { "distance": "25" } },
+    { "type": "wokwi-pushbutton", "id": "btn_mode", "top": 280, "left": 50, "attrs": { "color": "blue" } }
+  ],
+  "connections": [
+    [ "uno:GND.1", "ultrasonic:GND", "black", [ "v0" ] ],
+    [ "uno:5V", "ultrasonic:VCC", "red", [ "v0" ] ],
+    [ "uno:11", "ultrasonic:TRIG", "green", [ "v0" ] ],
+    [ "uno:12", "ultrasonic:ECHO", "blue", [ "v0" ] ],
+    [ "uno:4", "btn_mode:2.1", "orange", [ "v0" ] ],
+    [ "uno:GND.2", "btn_mode:1.1", "black", [ "v0" ] ]
+  ]
+}
